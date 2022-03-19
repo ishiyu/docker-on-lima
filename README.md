@@ -37,3 +37,12 @@ yml 名がそのまま lima VM 名になる為、それを指定すると起動�
 limactl start docker-on-lima
 ```
 
+## Lima上のDockerへのアクセス準備
+
+```sh
+vim ~/.zshrc
+
+# 以下を追加
+export DOCKER_HOST=unix://$HOME/.lima/docker-on-lima/sock/docker.sock
+```
+
