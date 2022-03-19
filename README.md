@@ -9,7 +9,10 @@ M1 mac で docker の Rails 環境を作れなかったため、lima で docker 
 ## homebrew で必要な library を追加する
 
 ```sh
-brew install lima
+$ brew install lima
+
+$ limactl -v
+limactl version 0.9.1
 ```
 
 ## lima の初回ダウンロード
@@ -25,4 +28,12 @@ limactl start docker-on-lima.yml
 の選択肢を聞かれるため、 `Proceed with the default configurationP を選択。
 
 2回目以降は不要。
+
+## 2回目以降の起動
+
+yml 名がそのまま lima VM 名になる為、それを指定すると起動する
+
+```sh
+limactl start docker-on-lima
+```
 
